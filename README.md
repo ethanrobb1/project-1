@@ -1,6 +1,7 @@
 # UOCIS322 - Project 1 #
-
-This project will get you started with creating a simple webpage server.
+Name: Ethan Robb
+Contact: erobb@uoregon.edu
+Description: This project will get you started with creating a simple webpage server.
 
 ## Getting started
 

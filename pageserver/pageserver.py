@@ -92,8 +92,8 @@ def respond(sock):
 
     parts = request.split()
     filepath = parts[1][1:]
-    
-    OSpath = os.path.join("pages", filepath)
+    Dir = get_options().DOCROOT
+    OSpath = os.path.join(Dir, filepath)
 
     if len(parts) > 1 and parts[0] == "GET":
         if filepath == "": #standard local host path
@@ -107,6 +107,7 @@ def respond(sock):
                 readFile = file.read()
                 transmit(STATUS_OK, sock)
                 transmit(readFile, sock)
+                transmit("Status 200 OK", sock)
         else: #if file path is invalid
             transmit(STATUS_NOT_FOUND, sock)
             transmit("Error 404: Not Found", sock)
